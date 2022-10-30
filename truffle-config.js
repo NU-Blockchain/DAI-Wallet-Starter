@@ -2,6 +2,8 @@ require('babel-register');
 require('babel-polyfill');
 
 module.exports = {
+  // change this to deploy to testnet/mainnet 
+  // currently links to local blockchain on ganache
   networks: {
     development: {
       host: "127.0.0.1",
@@ -13,10 +15,7 @@ module.exports = {
   contracts_build_directory: './src/abis/',
   compilers: {
     solc: {
-      optimizer: {
-        enabled: true,
-        runs: 200
-      }
+      version: "0.8.4"
     }
   }
 }
